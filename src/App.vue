@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="app">
+    <Navigation/>
+    <v-content class="ma-0 pa-0">
+      <Portfolio/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Portfolio from './components/Portfolio.vue'
+import Navigation from './components/Navigation.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Portfolio,
+    Navigation
+  },
+  data() {
+    return {
+      options: {
+      scrollOverflow: true
+    },
   }
+}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang='scss'>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+$body-page: 'Playfair Display';
+.v-application {
+  font-family: $body-page !important;
+}
+body {
+  margin: 0 !important;
+}
+p {
+  margin: 0 0 4px 0 !important;
 }
 </style>
