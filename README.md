@@ -1,2 +1,4 @@
 # portfolio-v1
-My first portfolio website. Learn how to use Vue.js framework to build website.
+Status: **_In development_**
+
+Check my webpage out: https://jessicaseann.github.io/v1/ 
